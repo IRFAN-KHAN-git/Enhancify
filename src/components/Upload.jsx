@@ -4,7 +4,7 @@ const Upload = (props)=>{
     const showEventHandler = (e)=>{
         const file = e.target.files[0];
         if(file){
-            props.uploadImgHandeler(file)
+            props.UploadImageHandler(file)
         }
     };  
 
