@@ -1,12 +1,26 @@
-# React + Vite
+# 🚀 EnhanceIt – AI-Powered Image Enhancer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**EnhanceIt** is a simple and powerful web app that lets users upload images and enhance them using AI magic — all in one click!
 
-Currently, two official plugins are available:
+🔗 [Live Demo](https://enhanceit.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📤 Upload your image from any device
+- ⚙️ Automatically enhances image quality using an AI-powered backend
+- ⏳ Loading state to keep users informed
+- 🔍 Preview both original and enhanced images side-by-side
+- ⚡ Built with performance and simplicity in mind
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React + Vite
+- **Styling**: Tailwind CSS
+- **API**: AI Image Enhancer (via `enhancedImageAPI.js`)
+- **Hosting**: Netlify
+
+---
