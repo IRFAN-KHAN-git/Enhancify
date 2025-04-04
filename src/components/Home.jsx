@@ -1,37 +1,36 @@
-import React, { useState } from "react";
-import Preview from "./Preview"
-import Upload from "./Upload"
-import { enhancedImageAPI } from "../utils/enhancedImageAPI";
+import ImageUpload from "./ImageUpload";
+import ImagePreview from "./ImagePreview";
+import { useState } from "react";
+import { enhancedImageAPI } from "../utils/enhanceImageApi";
 
-    const Home = ()=>{
-        const [uploadImg , setUploadImg] = useState(null);
-        const [enhImg , setEnhImg] = useState(null);
-        const [loading, setloading] = useState(false);
-        
-        const uploadImgHandeler = async (file)=>{
-            setUploadImg(URL.createObjectURL(file));
-            setloading(true);
-            try{
-                const enhancedURL = await enhancedImageAPI(file);
-                setEnhImg(enhancedURL.image);
-                setloading(false);
-            }catch(err){
-                console.log(err);
-                alert("err while enhancing the image")
-            }
+const Home = () => {
+    const [uploadImage, setUploadImage] = useState(null);
+    const [enhancedImage, setEnhancedImage] = useState(null);
+    const [loading, setloading] = useState(false);
 
+    const UploadImageHandler = async (file) => {
+        setUploadImage(URL.createObjectURL(file));
+        setloading(true);
+        try {
+            const enhancedURL = await enhancedImageAPI(file);
+            setEnhancedImage(enhancedURL);
+            setloading(false);
+        } catch (error) {
+            console.log(error);
+            alert("Error while enhancing the image. Please try again later.");
         }
-        return (
-            <>
-                <Upload uploadImgHandeler={uploadImgHandeler}/>  
-                <Preview
-  loading={loading}
-  uploaded={uploaded}
-  enhanced={image && image.image}
-/>
+    };
 
-             </>
-        );
-    };  
+    return (
+        <>
+            <ImageUpload UploadImageHandler={UploadImageHandler} />
+            <ImagePreview
+                loading={loading}
+                uploaded={uploadImage}
+                enhanced={enhancedImage?.image}
+            />
+        </>
+    );
+};
 
-    export default Home;
+export default Home;
