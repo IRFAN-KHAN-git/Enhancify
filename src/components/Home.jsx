@@ -1,6 +1,6 @@
-import ImageUpload from "./ImageUpload";
-import ImagePreview from "./ImagePreview";
-import { useState } from "react";
+import React, { useState } from "react";
+import Preview from "./Preview"
+import Upload from "./Upload"
 import { enhancedImageAPI } from "../utils/enhanceImageApi";
 
 const Home = () => {
