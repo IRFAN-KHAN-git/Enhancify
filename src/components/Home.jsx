@@ -24,11 +24,12 @@ import { enhancedImageAPI } from "../utils/enhancedImageAPI";
         return (
             <>
                 <Upload uploadImgHandeler={uploadImgHandeler}/>  
-                <Preview 
-                loading = {loading}
-                uploaded = {uploadImg}
-                enhanced = {enhImg.image}
-                />  
+                <Preview
+  loading={loading}
+  uploaded={uploaded}
+  enhanced={image && image.image}
+/>
+
              </>
         );
     };  
